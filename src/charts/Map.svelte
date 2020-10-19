@@ -1,15 +1,43 @@
 <script>
-   import { onMount } from "svelte"
+   import { onMount, afterUpdate } from "svelte"
    import mapboxgl from 'mapbox-gl'
 
   let mapRef;
 
   // props
   export let centerlnglat
+  export let pitch
+  export let bearing
   export let zoom
+  export let data
+  export let active
+
+  let datapoints = []
 
 
    onMount(async () => {
+      data.forEach(d => {
+         let newobj = {
+           "type": "Feature",
+           "properties": {
+             "title": d.name,
+             "anchor": "right",
+             "anchor-offset": [-1, 0]
+           },
+           "geometry": {
+             "coordinates": [
+               d.lng,
+               d.lat
+             ],
+             "type": "Point"
+           },
+           "id": d.id
+         }
+
+         datapoints.push(newobj)
+
+      })
+
       mapboxgl.accessToken = 'pk.eyJ1IjoidG1hY2hhZG9udSIsImEiOiJjanVjdDFudDMwMDR4NGRtdGJ4NndiaW9pIn0.JS0ffUQym0L07752GAwMFg';
 
      // Create the map
@@ -17,170 +45,68 @@
          container: 'map',
          style: 'mapbox://styles/tmachadonu/ck1b4p64a07ea1clc4twz44dc/draft',
          center: centerlnglat,
-         zoom: zoom
+         zoom: zoom,
+         bearing: bearing,
+         pitch: pitch
       });
 
       mapRef.on('load', function() {
          mapRef.addSource('points', {
             'type': 'geojson',
             'data': {
-              "features": [
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "title": "Curry Student Center Help Desk (across from Crossroads)",
-                    "hours": "Mon-Thurs 7am-12am\nFri 7am-11pm\nSat 8am-11pm\nSun 10am-12am",
-                    "anchor": "right", "anchor-offset": [-1, 0]
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -71.087592,
-                      42.339097
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "42e60f1b8fd10671595c74c584ffdd36"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "title": "West Village F Visitor Center",
-                    "hours": "Mon-Fri 10am–5pm",
-                    "anchor": "right", "anchor-offset": [-1, 0]
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -71.091703,
-                      42.337343
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "623a5dbc867fc35c8a7da0e0a236973f"
-                },
-                // {
-                //   "type": "Feature",
-                //   "properties": {
-                //     "title": "Front desk, Marino Center",
-                //     "anchor": "right", "anchor-offset": [-1, 0]
-                //   },
-                //   "geometry": {
-                //     "coordinates": [
-                //       -71.090376,
-                //       42.340156
-                //     ],
-                //     "type": "Point"
-                //   },
-                //   "id": "924bd89dbc2528cb745a8b959fece669"
-                // },
-                // {
-                //   "type": "Feature",
-                //   "properties": {
-                //     "title": "Guard booth, Gainsborough St. bridge",
-                //     "anchor": "right", "anchor-offset": [-1, 0]
-                //   },
-                //   "geometry": {
-                //     "coordinates": [
-                //       -71.084691,
-                //       42.340322
-                //     ],
-                //     "type": "Point"
-                //   },
-                //   "id": "e607d931caeba587399ac8134f9f7a99"
-                // },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "title": "Guard Booths on the Academic (east) side of campus",
-                    "hours": "daily 7am-7pm",
-                    "anchor": "left", "anchor-offset": [1, 0]
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -71.08696,
-                      42.339069
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "f39fff9d63d30344bdf22ae552e1a759"
-               },
-               {
-                 "type": "Feature",
-                 "properties": {
-                   "title": "Guard Booths on the West Village side of campus",
-                   "hours": "daily 7am–11pm",
-                   "anchor": "right", "anchor-offset": [-1, 0]
-                 },
-                 "geometry": {
-                   "coordinates": [
-                     -71.091264,
-                     42.338478
-                   ],
-                   "type": "Point"
-                 },
-                 "id": "f39fff9d63d30344bdf22ae552e1a759"
-               },
-               {
-                 "type": "Feature",
-                 "properties": {
-                   "title": "MasParc Office at the Gainsborough Garage",
-                   "hours": "open 24/7",
-                   "anchor": "left", "anchor-offset": [1, 0]
-                 },
-                 "geometry": {
-                   "coordinates": [
-                     -71.085682,
-                     42.340413
-                   ],
-                   "type": "Point"
-                 },
-                 "id": "f39fff9d63d30344bdf22ae552e1a759"
-               }
-              ],
+              "features": datapoints,
               "type": "FeatureCollection"
             }
          });
 
-         mapRef.addLayer({
-            'id': 'points',
-            'type': 'circle',
-            'source': 'points',
-            'paint': {
-               'circle-radius': 8,
-               'circle-color': 'red',
-               'circle-stroke-color': 'black',
-               'circle-stroke-width': 2
-            }
-         });
+         // mapRef.addLayer({
+         //    'id': 'points-circles',
+         //    'source': 'points',
+         //    'type': 'circle',
+         //    'paint': {
+         //       'circle-radius': 4,
+         //       'circle-color': 'white',
+         //       'circle-stroke-color': 'red',
+         //       'circle-stroke-width': 4
+         //    }
+         // });
 
-         mapRef.addLayer({
-            'id': 'points-labels',
-            'type': 'symbol',
-            'source': 'points',
-            'layout': {
-               'icon-image': 'custom-marker',
-               'text-field': [
-               'format',
-               ['get', 'title'],
-               { 'font-scale': 1 },
-               '\n',
-               {},
-               ['get', 'hours'],
-               { 'font-scale': 0.7 }
-               ],
-               'text-font': [
-                  'Overpass Bold',
-                  'Arial Unicode MS Bold'
-               ],
-               'text-offset': ['get', 'anchor-offset'],
-               'text-anchor': ['get', 'anchor'],
-               'text-justify': ['get', 'anchor']
-            },
-            "paint": {
-                "text-color": "#202",
-                "text-halo-color": "#fff",
-                "text-halo-width": 3
-            },
-         });
+         datapoints.forEach(function(marker) {
+            let el = document.createElement('div');
+            el.className = 'marker';
+            el.dataset.placeid = marker.id;
+            el.style.backgroundImage = "url('/photos/" + marker.id + ".jpg')";
+
+            new mapboxgl.Marker(el)
+             .setLngLat(marker.geometry.coordinates)
+             .addTo(mapRef);
+         })
+
+         // mapRef.addLayer({
+         //    'id': 'points-labels',
+         //    'source': 'points',
+         //    'type': 'symbol',
+         //    'layout': {
+         //       'icon-image': 'custom-marker',
+         //       'text-field': [
+         //       'format',
+         //       ['get', 'title'],
+         //       { 'font-scale': 1 }
+         //       ],
+         //       'text-font': [
+         //          'DIN Offc Pro Medium',
+         //          'Arial Unicode MS Bold'
+         //       ],
+         //       'text-offset': ['get', 'anchor-offset'],
+         //       'text-anchor': ['get', 'anchor'],
+         //       'text-justify': ['get', 'anchor']
+         //    },
+         //    "paint": {
+         //        "text-color": "#202",
+         //        "text-halo-color": "#fff",
+         //        "text-halo-width": 3
+         //    },
+         // });
 
          // mapRef.on('click', 'points', function(e) {
          //    var coordinates = e.features[0].geometry.coordinates.slice();
@@ -213,18 +139,93 @@
 
 
 
-   });
+   }); //onMount
+
+   afterUpdate(() => {
+      let prevactive = document.querySelector(".active");
+      let activeplace = document.querySelector("[data-placeid='" + active.id + "']");
+      if (prevactive) {
+         prevactive.classList.remove("active")
+      }
+      if (activeplace) {
+         activeplace.classList.add("active")
+      }
+
+      if (active.lng) {
+         mapRef.flyTo({
+            center: [
+               active.lng,
+               active.lat
+            ],
+            essential: true
+         });
+      }
+
+
+
+      // activeplace.classList.add("active");
+	})
 </script>
 
 
 
 <style>
-   #map {
-       max-width:90vw;
-       width: 900px;
-       height: 500px;
-     }
+   :global(.marker) {
+     background-size:cover;
+     border:2px solid black;
+     width: 75px;
+     height: 75px;
+     border-radius: 50%;
+     cursor: pointer;
+     position: absolute;
+      top: -36px;
+      left: 0;
+      will-change: transform;
+     z-index: 1
+   }
 
+   :global(.marker.active) {
+     width: 175px;
+     height: 175px;
+     top: -86px;
+     z-index:50
+   }
+
+   :global(.marker::after) {
+     content: " ";
+     position: absolute;
+     top: 100%; /* At the bottom of the tooltip */
+     left: 50%;
+     margin-left: -10px;
+     border-width: 10px;
+     border-style: solid;
+     border-color: black transparent transparent transparent;
+   }
+
+   :global(.mapboxgl-control-container div) {
+      display:inline-block;
+   }
+
+   :global(.mapboxgl-control-container) {
+      display:inline-block;
+      position:relative;
+      top:-25px;
+      background-color:rgba(255, 255, 255, 0.8);
+   }
+
+   :global(.mapboxgl-control-container a) {
+      color:#555;
+      font-size:10px;
+      margin-right:0.5rem;
+   }
+
+   #map {
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+  }
 
 </style>
 

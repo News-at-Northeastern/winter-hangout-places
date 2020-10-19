@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "location": "",
+    "name": "Churchill-Snell landscape improvements",
+    "description": "A new walkway between Churchill Hall and Snell Engineering features outdoor seating surrounded by lush New England ferns.",
+    "status": "Now Open",
+    "lat": 42.338577,
+    "lng": -71.088567
+  },
+  {
+    "id": 2,
+    "location": "",
+    "name": "Snell Engineering 108 and 168 classrooms renovation",
+    "description": "Snell Engineering 108 and 168 were completely remodeled into modern, auditorium-style classrooms with tiered seating and new heating, ventilation, and air conditioning systems.",
+    "status": "Now Open",
+    "lat": 42.338299,
+    "lng": -71.08878
+  },
+  {
+    "id": 3,
+    "location": "",
+    "name": "A new suite for the Department of Philosophy and Religion",
+    "description": "Students, faculty, and staff in the Department of Philosophy and Religion now have a dedicated space on the fourth floor of Renaissance Park to collaborate on projects. The space includes new offices.",
+    "status": "Now Open",
+    "lat": 42.338051,
+    "lng": -71.090972
+  },
+  {
+    "id": 4,
+    "location": "",
+    "name": "Department of Mechanical and Industrial Engineering Capstone Design Studio",
+    "description": "The Department of Mechanical and Industrial Engineering’s Design Studio in Forsyth Hall was expanded to include three conference rooms and a 3D printing room.",
+    "status": "Now Open",
+    "lat": 42.338568,
+    "lng": -71.089661
+  },
+  {
+    "id": 5,
+    "location": "",
+    "name": "The New Biopharmaceutical Analysis Training Laboratory on Northeastern’s Innovation Campus at Burlington, Massachusetts",
+    "description": "A new state-of-the-art laboratory was built on Northeastern’s Innovation Campus at Burlington, Massachusetts. The facility will feature research labs, a meeting area for workshops, and a makerspace with a suite of high-tech equipment, including 3D printers and other prototyping technology.",
+    "status": "Now Open",
+    "lat": 42.478307,
+    "lng": -71.19224
+  },
+  {
+    "id": 6,
+    "location": "",
+    "name": "Floors 13 and 22 at 177 Huntington Ave.",
+    "description": "The 13th and 22nd floors of the new 26-story apartment building at 177 Huntington Ave. were fitted to provide housing for faculty members who are studying machine learning.",
+    "status": "Now Open",
+    "lat": 42.344842,
+    "lng": -71.082639
+  },
+  {
+    "id": 7,
+    "location": "",
+    "name": "Parson’s Field turf installation",
+    "description": "The baseball team and the men and women’s soccer teams will play on an all new turf field at Parson’s Field in Brookline, Massachusetts. The bullpens for the baseball team were also renovated.",
+    "status": "Now Open",
+    "lat": 42.336908,
+    "lng": -71.113565
+  },
+  {
+    "id": 8,
+    "location": "",
+    "name": "142-148 Hemenway Street",
+    "description": "The 20-unit apartment complex that sits on the north part of the university’s Boston campus was renovated to include new windows and a new fire suppression system.",
+    "status": "Now Open",
+    "lat": 42.342017,
+    "lng": -71.090444
+  },
+  {
+    "id": 9,
+    "location": "",
+    "name": "LightView",
+    "description": "Northeastern formed a partnership with American Campus Communities to build LightView, the first privately-owned student housing project in Massachusetts. The new 21-story, 825-bed residence hall at the corner of Columbus Avenue and Burke Street includes a state-of-the-art fitness center, recreational lounges, and 2,200 square feet of vibrant street-level retail. The new apartment building was opened to students in fall 2019.",
+    "status": "Now Open",
+    "lat": 42.337236,
+    "lng": -71.085544
+  },
+  {
+    "id": 10,
+    "location": "",
+    "name": "The pedestrian bridge",
+    "description": "Northeastern worked with Skanska and Payette to design and construct a new pedestrian bridge that links the Huntington Avenue side of campus with the Columbus Avenue side. The bridge, which was opened to foot traffic in the spring, spans the five MBTA and Amtrak rail lines that divide the Boston campus, forming a physical link between the two sides.",
+    "status": "Now Open",
+    "lat": 42.33761,
+    "lng": -71.08747
+  }
+]
