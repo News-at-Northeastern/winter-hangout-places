@@ -43,7 +43,7 @@
      // Create the map
       mapRef = new mapboxgl.Map({
          container: 'map',
-         style: 'mapbox://styles/tmachadonu/ck1b4p64a07ea1clc4twz44dc/draft',
+         style: 'mapbox://styles/tmachadonu/ckgic5tcc7iur19mynsutt5jh',
          center: centerlnglat,
          zoom: zoom,
          bearing: bearing,
@@ -75,7 +75,13 @@
             let el = document.createElement('div');
             el.className = 'marker';
             el.dataset.placeid = marker.id;
-            el.style.backgroundImage = "url('/photos/" + marker.id + ".jpg')";
+            el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2019/09/fall-2019-campus-construction/photos/" + marker.id + ".jpg')";
+
+            el.addEventListener('click', function() {
+               active = data.filter(d => (d.id === marker.id))[0];
+               active = active
+               activeChange(active)
+            })
 
             new mapboxgl.Marker(el)
              .setLngLat(marker.geometry.coordinates)
@@ -136,12 +142,13 @@
          // });
 
       })
-
-
-
    }); //onMount
 
-   afterUpdate(() => {
+   afterUpdate(() =>
+      activeChange(active)
+   )
+
+   function activeChange(active) {
       let prevactive = document.querySelector(".active");
       let activeplace = document.querySelector("[data-placeid='" + active.id + "']");
       if (prevactive) {
@@ -155,16 +162,12 @@
          mapRef.flyTo({
             center: [
                active.lng,
-               active.lat
+               active.lat + 0.013
             ],
             essential: true
          });
       }
-
-
-
-      // activeplace.classList.add("active");
-	})
+	}
 </script>
 
 

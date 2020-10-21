@@ -25,28 +25,15 @@
 
 <style>
 	#interactiveContainer {
-		height:100vh;
+		height:95vh;
+		margin-bottom:50vh;
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 3fr 1fr 2fr;
+		grid-template-columns: 55fr 45fr;
+		grid-template-rows: 50% 50%;
 		gap: 0px 0px;
 		grid-template-areas:
-		 "map-map"
-		 "map-info"
-		 "map-nav"
-	}
-
-	@media screen and (min-width:600px) {
-		#interactiveContainer {
-			height: 650px;
-			display: grid;
-		   grid-template-columns: 1fr 3fr;
-		   grid-template-rows: 3fr 1fr;
-		   gap: 0px 0px;
-		   grid-template-areas:
-		    "map-nav map-map"
-		    "map-info map-info";
-		}
+		"map-map map-map"
+		"map-info map-nav";
 	}
 
 	.map-info { grid-area: map-info; }
@@ -60,13 +47,13 @@
 	.map-nav button {
 		display:block;
 		width: 100%;
-		text-align:left;
 		background-color: #efefef;
 		border:1px solid #999;
 		border-radius:2px;
-		margin:0 0 0.5rem 0;
+		margin:0 0.2rem 0.2rem;
 		cursor:pointer;
-		padding:0.25rem;
+		padding:0.2rem;
+		white-space: inherit;
 	}
 
 	.map-nav button:hover {
@@ -82,13 +69,48 @@
 		position: relative;
 	  height: 100% !important;
 	  width: 100% !important;
+	  overflow:hidden;
 	}
 
 	span.map-item-title {
-		font-size:1.5rem;
+		font-size:1.15rem;
 		font-weight:bold;
 		display:block;
 		margin:0.5rem 0 1rem 0;
+	}
+
+	p.map-item-desc {
+		font-size:0.85rem;
+	}
+
+	@media screen and (min-width:600px) {
+		#interactiveContainer {
+			height: 650px;
+			margin-bottom:2rem;
+			display: grid;
+		   grid-template-columns: 25% 75%;
+		   grid-template-rows: 3fr 1fr;
+		   gap: 0px 0px;
+		   grid-template-areas:
+		    "map-nav map-map"
+		    "map-info map-info";
+		}
+
+		span.map-item-title {
+			font-size:1.5rem;
+		}
+
+		p.map-item-desc {
+			font-size:1rem;
+		}
+
+		.map-nav button {
+			display:block;
+			width: 100%;
+			text-align:left;
+			margin:0 0 0.5rem 0;
+			padding:0.25rem;
+		}
 	}
 
 </style>
@@ -113,11 +135,11 @@
   <div class="map-map">
 	  <Map
 		  zoom={12}
-		  centerlnglat={[-71.12, 42.36]}
+		  centerlnglat={[-71.1, 42.34]}
 		  pitch={60}
 		  bearing={0}
 		  data={dataset}
-		  active={active}
+		  bind:active={active}
 	  />
   </div>
 </div>

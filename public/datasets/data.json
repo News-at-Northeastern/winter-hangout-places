@@ -36,15 +36,6 @@
     "lng": -71.089661
   },
   {
-    "id": 5,
-    "location": "",
-    "name": "The New Biopharmaceutical Analysis Training Laboratory on Northeastern’s Innovation Campus at Burlington, Massachusetts",
-    "description": "A new state-of-the-art laboratory was built on Northeastern’s Innovation Campus at Burlington, Massachusetts. The facility will feature research labs, a meeting area for workshops, and a makerspace with a suite of high-tech equipment, including 3D printers and other prototyping technology.",
-    "status": "Now Open",
-    "lat": 42.478307,
-    "lng": -71.19224
-  },
-  {
     "id": 6,
     "location": "",
     "name": "Floors 13 and 22 at 177 Huntington Ave.",
@@ -88,5 +79,14 @@
     "status": "Now Open",
     "lat": 42.33761,
     "lng": -71.08747
-  }
+},
+{
+  "id": 5,
+  "location": "",
+  "name": "The New Biopharmaceutical Analysis Training Laboratory on Northeastern’s Innovation Campus at Burlington, Massachusetts",
+  "description": "A new state-of-the-art laboratory was built on Northeastern’s Innovation Campus at Burlington, Massachusetts. The facility will feature research labs, a meeting area for workshops, and a makerspace with a suite of high-tech equipment, including 3D printers and other prototyping technology.",
+  "status": "Now Open",
+  "lat": 42.478307,
+  "lng": -71.19224
+}
 ]
