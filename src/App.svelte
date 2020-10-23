@@ -134,10 +134,10 @@
   </div>
   <div class="map-map">
 	  <Map
-		  zoom={12}
-		  centerlnglat={[-71.1, 42.34]}
+		  zoom={15}
+		  centerlnglat={[-71.086444, 42.341416]}
 		  pitch={60}
-		  bearing={0}
+		  bearing={-45}
 		  data={dataset}
 		  bind:active={active}
 	  />
