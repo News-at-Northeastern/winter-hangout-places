@@ -162,8 +162,8 @@
       if (active.lng) {
          mapRef.flyTo({
             center: [
-               active.lng,
-               active.lat
+               active.lng - 0.00025,
+               active.lat + 0.00012
             ],
             zoom: 18,
             essential: true
