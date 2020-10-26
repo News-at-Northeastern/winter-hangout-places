@@ -28,12 +28,13 @@
 		height:95vh;
 		margin-bottom:50vh;
 		display: grid;
-		grid-template-columns: 55fr 45fr;
-		grid-template-rows: 50% 50%;
+		grid-template-columns: 1fr;
+		grid-template-rows: 40% 25% 35%;
 		gap: 0px 0px;
 		grid-template-areas:
-		"map-map map-map"
-		"map-info map-nav";
+		"map-map"
+		"map-nav"
+		"map-info";
 	}
 
 	:global(#interactiveContainer div) {
@@ -45,12 +46,14 @@
 	.map-map { grid-area: map-map; }
 
 	.map-nav {
-		padding-right:0.5rem;
+		padding-right:0;
 	}
 
 	.map-nav button {
-		display:block;
-		width: 100%;
+		display:inline-block;
+		width: 31%;
+		height:44px;
+		float:left;
 		background-color: #efefef;
 		border:1px solid #999;
 		border-radius:2px;
@@ -113,6 +116,8 @@
 		.map-nav button {
 			display:block;
 			width: 100%;
+			height:unset;
+			float:unset;
 			text-align:left;
 			margin:0 0 0.5rem 0;
 			padding:0.25rem;

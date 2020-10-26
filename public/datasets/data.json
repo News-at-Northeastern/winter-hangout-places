@@ -2,62 +2,62 @@
   {
     "id": 1,
     "name": "Asymptomatic Testing Center",
-    "description": "Create a COVID testing center in Cabot Cage for asymptomatic population.",
+    "description": "Cabot Physical Education Center was turned into Northeastern's primary testing center, for the university's asymptomatic population. Work included dozens of stations for test administrators and a massive new ventilation system.",
     "lat": 42.339598,
     "lng": -71.089835
   },
   {
     "id": 2,
     "name": "Symptomatic Testing Center",
-    "description": "Create a COVID testing center in Cabot for asymptomatic population, and a testing center in Marino (SASS) for symptomatic population.",
+    "description": "In addition to the main testing center in Cabot, a special testing center for those exhibiting symptoms was also constructed in the Marino Center, in the SASS office.",
     "lat": 42.34024,
     "lng": -71.090042
   },
   {
     "id": 3,
     "name": "BioE Capstone",
-    "description": "Expansion of the BioEngineering Capstone program to accommodate anticipated expansion of program. Reprogramming and renovation of the Student Group spaces within the Richards basement to ensure infrastructure is in place to allow use of the space.",
+    "description": "The BioEngineering Capstone Collaborative was renovated, in anticipation of expansion of the program. The student group spaces in the Richards basement were reprogrammed, with new infrastructure installed. (Renderings: Ellenzweig)",
     "lat": 42.339934,
     "lng": -71.08872
   },
   {
     "id": 4,
     "name": "Belvidere Place Renovations",
-    "description": "",
+    "description": "The College of Professional Studies suite at Belvidere Place sports a new, modern refresh this year.",
     "lat": 42.345302,
     "lng": -71.083835
   },
   {
     "id": 5,
     "name": "ECE Teaching Classroom",
-    "description": "This project seeks to optimize the space in Hayden Hall for showcasing College of Engineering Teaching Classrooms,  Capstone Design Studio,  and lab space for Electrical and Computer Engineering. The program includes updated Capstone Design Studio,  larger ECE classrooms,  dry labs for microelectronics/sensors and related research,  and maker space to enhance the experience and increase visibility.",
+    "description": "This project seeks to optimize the space in Hayden Hall for showcasing College of Engineering teaching classrooms and lab space for Electrical and Computer Engineering. The program includes an updated Capstone Design Studio, larger ECE classrooms, dry labs for microelectronics/sensors and related research,  and maker space to enhance the experience and increase visibility.",
     "lat": 42.339463,
     "lng": -71.088546
   },
   {
     "id": 6,
     "name": "Fenway Center",
-    "description": "Modifications to the Fenway Center to make it fully ADA compliant.",
+    "description": "The Fenway Center has new paths and ramps to make it fully ADA-compliant.",
     "lat": 42.34209,
     "lng": -71.087928
   },
   {
     "id": 7,
     "name": "Richardson Plaza",
-    "description": "Project scope encompasses the transforming Richardson Plaza to attract more usage and create green space with seatings in addition to upgrading the lighting and possibly adding outlet around the site.",
+    "description": "Richardson Plaza has new green space, seating areas, and electrical and lighting fixtures, breathing new life into the space.",
     "lat": 42.338914,
     "lng": -71.09091
   },
   {
     "id": 8,
     "name": "Snell Engineering",
-    "description": "Complete a gut renovation of classrooms 108 and 168 Snell Engineering.",
+    "description": "Classrooms 108 and 168 in the Snell Engineering Center have been gut-renovated, updating both the aesthetics of the rooms and the teaching technology inside.",
     "lat": 42.338325,
     "lng": -71.088853
   },
   {
     "id": 9,
-    "name": "Wind Generator",
+    "name": "ICBM wind generator",
     "description": "",
     "lat": 42.477956,
     "lng": -71.19323
@@ -65,7 +65,7 @@
   {
     "id": 10,
     "name": "outdoor dining tents",
-    "description": "Installation of tents and furniture in five locations on campus to provide space for student events during the fall semester.",
+    "description": "Five tents, with outdoor furniture, have been installed around the campus to provide ventilated, outdoor space for dining, events, and gatherings, held within the COVID safety guidelines.",
     "lat": 42.337306,
     "lng": -71.091288
   }

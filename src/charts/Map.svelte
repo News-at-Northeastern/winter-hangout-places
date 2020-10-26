@@ -190,9 +190,9 @@
    }
 
    :global(.marker.active) {
-     width: 300px;
-     height: 300px;
-     top: -150px;
+     width: 220px;
+     height: 220px;
+     top: -110px;
      z-index:50
    }
 
@@ -226,11 +226,19 @@
    }
 
    #map {
-
       position: absolute;
       top: 0;
       bottom: 0;
       width: 100%;
+  }
+
+  @media screen and (min-width:600px) {
+     :global(.marker.active) {
+      width: 300px;
+      height: 300px;
+      top: -150px;
+      z-index:50
+     }
   }
 
 </style>
