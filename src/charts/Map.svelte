@@ -75,8 +75,8 @@
             let el = document.createElement('div');
             el.className = 'marker';
             el.dataset.placeid = marker.id;
-            el.style.backgroundImage = "url('/photos/" + marker.id + ".jpg')";
-            // el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2019/09/fall-2019-campus-construction/photos/" + marker.id + ".jpg')";
+            // el.style.backgroundImage = "url('/photos/" + marker.id + ".jpg')";
+            el.style.backgroundImage = "url('//news.northeastern.edu/interactive/2020/10/campus-construction-2020/photos/" + marker.id + ".jpg')";
 
             el.addEventListener('click', function() {
                active = data.filter(d => (d.id === marker.id))[0];
@@ -214,7 +214,8 @@
    :global(.mapboxgl-control-container) {
       display:inline-block;
       position:relative;
-      top:-25px;
+      top: -40px;
+      height: 40px;
       background-color:rgba(255, 255, 255, 0.8);
    }
 

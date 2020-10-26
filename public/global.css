@@ -1,6 +1,6 @@
-.article-content, #interactive{
+#interactive{
 	width: 100%;
-	margin: 0 auto;
+	margin: 1rem 0;
 }
 
 #interactive > svg, #interactive > #svgContainer, .tick text {

@@ -36,6 +36,10 @@
 		"map-info map-nav";
 	}
 
+	:global(#interactiveContainer div) {
+		margin-top: 0;
+	}
+
 	.map-info { grid-area: map-info; }
 	.map-nav { grid-area: map-nav; }
 	.map-map { grid-area: map-map; }
@@ -76,10 +80,12 @@
 		font-size:1.15rem;
 		font-weight:bold;
 		display:block;
-		margin:0.5rem 0 1rem 0;
+		text-transform:uppercase;
+		margin:0.5rem 0 0.5rem 0;
 	}
 
 	p.map-item-desc {
+		margin-top:0;
 		font-size:0.85rem;
 	}
 
