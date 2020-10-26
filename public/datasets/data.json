@@ -61,5 +61,12 @@
     "description": "",
     "lat": 42.477956,
     "lng": -71.19323
+  },
+  {
+    "id": 10,
+    "name": "outdoor dining tents",
+    "description": "Installation of tents and furniture in five locations on campus to provide space for student events during the fall semester.",
+    "lat": 42.337306,
+    "lng": -71.091288
   }
 ]

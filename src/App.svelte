@@ -135,9 +135,9 @@
   <div class="map-map">
 	  <Map
 		  zoom={15}
-		  centerlnglat={[-71.086444, 42.341416]}
-		  pitch={60}
-		  bearing={-45}
+		  centerlnglat={[-71.087433, 42.34061]}
+		  pitch={45}
+		  bearing={-40}
 		  data={dataset}
 		  bind:active={active}
 	  />
