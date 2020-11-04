@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Asymptomatic Testing Center",
-    "description": "Cabot Physical Education Center was turned into Northeastern's primary testing center, for the university's asymptomatic population. Work included dozens of stations for test administrators and a massive new ventilation system.",
+    "description": "Cabot Physical Education Center was turned into Northeastern's primary testing center for the university's asymptomatic population. Work included adding dozens of stations for test administrators and a massive new ventilation system.",
     "lat": 42.339598,
     "lng": -71.089835
   },
@@ -16,21 +16,21 @@
   {
     "id": 3,
     "name": "BioE Capstone",
-    "description": "The BioEngineering Capstone Collaborative was renovated, in anticipation of expansion of the program. The student group spaces in the Richards basement were reprogrammed, with new infrastructure installed. (Renderings: Ellenzweig)",
+    "description": "The BioEngineering Capstone Collaborative was renovated, in anticipation of the program’s expansion. Student group spaces in the Richards basement were reprogrammed, with new infrastructure installed. (Renderings: Ellenzweig)",
     "lat": 42.339934,
     "lng": -71.08872
   },
   {
     "id": 4,
     "name": "Belvidere Place Renovations",
-    "description": "The College of Professional Studies suite at Belvidere Place sports a new, modern refresh this year.",
+    "description": "The College of Professional Studies suite at Belvidere Place sports a new, modern refresh.",
     "lat": 42.345302,
     "lng": -71.083835
   },
   {
     "id": 5,
     "name": "ECE Teaching Classroom",
-    "description": "This project seeks to optimize the space in Hayden Hall for showcasing College of Engineering teaching classrooms and lab space for Electrical and Computer Engineering. The program includes an updated Capstone Design Studio, larger ECE classrooms, dry labs for microelectronics/sensors and related research,  and maker space to enhance the experience and increase visibility.",
+    "description": "This project seeks to optimize the space in Hayden Hall for showcasing College of Engineering teaching classrooms and lab space for Electrical and Computer Engineering. It includes an updated Capstone Design Studio, larger ECE classrooms, dry labs for microelectronics/sensors and related research, and maker space to enhance student experiences and increase visibility.",
     "lat": 42.339463,
     "lng": -71.088546
   },
@@ -44,7 +44,7 @@
   {
     "id": 7,
     "name": "Richardson Plaza",
-    "description": "Richardson Plaza has new green space, seating areas, and electrical and lighting fixtures, breathing new life into the space.",
+    "description": "Richardson Plaza has new green space, seating areas, and electrical and lighting fixtures, breathing fresh life into the spot.",
     "lat": 42.338914,
     "lng": -71.09091
   },
@@ -58,15 +58,22 @@
   {
     "id": 9,
     "name": "ICBM wind generator",
-    "description": "",
+    "description": "On Northeastern’s Burlington campus, a new wind generator is the latest addition to the drone testing facility, where researchers can simulate a range of outdoor weather conditions.",
     "lat": 42.477956,
     "lng": -71.19323
   },
   {
     "id": 10,
     "name": "outdoor dining tents",
-    "description": "Five tents, with outdoor furniture, have been installed around the campus to provide ventilated, outdoor space for dining, events, and gatherings, held within the COVID safety guidelines.",
+    "description": "Five tents with outdoor furniture have been installed around the campus to provide ventilated, outdoor space for dining, events, and gatherings—all within COVID safety guidelines.",
     "lat": 42.337306,
     "lng": -71.091288
+  },
+  {
+    "id": 11,
+    "name": "EXP",
+    "description": "Construction work is underway on EXP, Northeastern’s next state-of-the-art research building, located next to ISEC on Columbus Avenue. The eight-story, 350,000-square-foot facility is scheduled to open in 2023.",
+    "lat": 42.337007,
+    "lng": -71.087737
   }
 ]
