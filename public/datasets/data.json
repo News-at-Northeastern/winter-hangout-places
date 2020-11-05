@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Asymptomatic Testing Center",
-    "description": "Cabot Physical Education Center was turned into Northeastern's primary testing center for the university's asymptomatic population. Work included adding dozens of stations for test administrators and a massive new ventilation system.",
+    "description": "Cabot Physical Education Center has transformed from a gym into Northeastern's primary testing center for the university's asymptomatic population. Work included adding dozens of stations for test administrators and a massive new ventilation system.",
     "lat": 42.339598,
     "lng": -71.089835
   },
@@ -30,7 +30,7 @@
   {
     "id": 5,
     "name": "ECE Teaching Classroom",
-    "description": "This project seeks to optimize the space in Hayden Hall for showcasing College of Engineering teaching classrooms and lab space for Electrical and Computer Engineering. It includes an updated Capstone Design Studio, larger ECE classrooms, dry labs for microelectronics/sensors and related research, and maker space to enhance student experiences and increase visibility.",
+    "description": "A Hayden Hall renovation has improved teaching classrooms and lab space for Electrical and Computer Engineering students. The project includes an updated Capstone Design Studio, larger ECE classrooms, dry labs for microelectronics/sensors and related research, and maker space.",
     "lat": 42.339463,
     "lng": -71.088546
   },

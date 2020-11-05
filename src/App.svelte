@@ -113,6 +113,17 @@
 			font-size:1rem;
 		}
 
+		.map-nav {
+			position:relative;
+		}
+
+		.map-nav-inner {
+			position: absolute;
+	    bottom: 0;
+	    width: 100%;
+	    padding-right: 10px;
+		}
+
 		.map-nav button {
 			display:block;
 			width: 100%;
@@ -132,16 +143,18 @@
   		<p class="map-item-desc">{active.description}</p>
   </div>
   <div class="map-nav">
-	  {#each dataset as place}
-		  <button
-		  		data-place={place.id}
-				on:click={() =>
-					handleClick(place)
-				}
-			>
-			  {place.name}
-		  </button>
-	  {/each}
+  	   <div class="map-nav-inner">
+		  {#each dataset as place}
+			  <button
+			  		data-place={place.id}
+					on:click={() =>
+						handleClick(place)
+					}
+				>
+				  {place.name}
+			  </button>
+		  {/each}
+		</div>
   </div>
   <div class="map-map">
 	  <Map
